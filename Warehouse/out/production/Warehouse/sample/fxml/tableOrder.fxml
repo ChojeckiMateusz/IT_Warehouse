@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.tableOrderController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <Label text="Orders" textFill="#0b89c7" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="orderTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="orderColumnUer" prefWidth="63.0" text="User" />
+                <TableColumn fx:id="orderColumnCustomer" prefWidth="151.0" text="Customer" />
+                  <TableColumn fx:id="orderColumnProduct" prefWidth="101.0" text="Product" />
+                  <TableColumn fx:id="orderColumnQuantity" prefWidth="60.0" text="Quantity" />
+                  <TableColumn fx:id="orderColumnComments" prefWidth="90.0" text="Comments" />
+                  <TableColumn fx:id="orderColumnPrice" prefWidth="54.0" text="Price" />
+              </columns>
+            </TableView>
+         </center>
+         <left>
+            <Pane prefHeight="339.0" prefWidth="40.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="339.0" prefWidth="40.0" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <HBox prefHeight="82.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="339.0" prefWidth="40.0" />
+                  <Button fx:id="productDeleteButton" mnemonicParsing="false" onMouseClicked="#deleteButtonClicked" style="-fx-background-color: #0b89c7;" text="Delete" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="48.0" right="135.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="productModifyButton" mnemonicParsing="false" onMouseClicked="#modifyButtonClicked" style="-fx-background-color: #ffffff;" text="Modify" textFill="#0b89c7">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="productBackButton" mnemonicParsing="false" onMouseClicked="#backButtonClicked" style="-fx-background-color: #0b89c7;" text="Back" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="135.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="62.0" prefWidth="40.0" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
